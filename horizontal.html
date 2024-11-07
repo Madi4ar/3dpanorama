@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panolens Click Position</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #panorama {
+        width: 100vw;
+        height: 100vh;
+      }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/105/three.min.js"></script>
+    <script src="https://cdn.rawgit.com/pchen66/panolens.js/master/build/panolens.min.js"></script>
+  </head>
+  <body>
+    <div id="panorama"></div>
+    <script>
+      var panorama, viewer;
+
+      // Создаем панораму
+      panorama = new PANOLENS.ImagePanorama('images/CAMERA_1_364_0000.jpg');
+
+      // Создаем viewer
+      viewer = new PANOLENS.Viewer({
+        container: document.getElementById('panorama'),
+        output: 'console',
+      });
+
+      // Добавляем панораму в viewer
+      viewer.add(panorama);
+
+      // Обработчик клика для получения координат yaw и pitch
+      viewer.addEventListener('click', function (event) {
+        const intersection = viewer.raycaster.intersectObject(panorama, true);
+        if (intersection.length > 0) {
+          const position = intersection[0].point;
+          const yaw = Math.atan2(position.x, position.z) * (180 / Math.PI);
+          const pitch =
+            Math.atan2(
+              position.y,
+              Math.sqrt(position.x * position.x + position.z * position.z)
+            ) *
+            (180 / Math.PI);
+          console.log(
+            `Координаты клика: Yaw: ${yaw.toFixed(2)}, Pitch: ${pitch.toFixed(
+              2
+            )}`
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
