@@ -9,12 +9,26 @@ const panorama7 = new PANOLENS.ImagePanorama('images/CAMERA_1_361_0000.png');
 const panorama8 = new PANOLENS.ImagePanorama('images/CAMERA_1_362_0000.jpg');
 const panorama9 = new PANOLENS.ImagePanorama('images/CAMERA_1_363_0000.jpg');
 
+// const panorama = new PANOLENS.ImagePanorama(
+//   'https://downloader.disk.yandex.ru/disk/pMB08k2OVLWnEw?export=download'
+// );
+
+// const panoramaNight = new PANOLENS.ImagePanorama('images/NIGHT_2.png');
+// const panorama2 = new PANOLENS.ImagePanorama('images/DVOR.png');
+// const panorama3 = new PANOLENS.ImagePanorama('images/CAMERA_360_0000.jpg');
+// const panorama4 = new PANOLENS.ImagePanorama('images/CAMERA_360_002_0000.jpg');
+// const panorama5 = new PANOLENS.ImagePanorama('images/CAMERA_1_364_0000.jpg');
+// const panorama6 = new PANOLENS.ImagePanorama('images/CAMERA_1_360_0000.jpg');
+// const panorama7 = new PANOLENS.ImagePanorama('images/CAMERA_1_361_0000.png');
+// const panorama8 = new PANOLENS.ImagePanorama('images/CAMERA_1_362_0000.jpg');
+// const panorama9 = new PANOLENS.ImagePanorama('images/CAMERA_1_363_0000.jpg');
+
 // Получение контейнера для панорамы
 let imageContainer = document.querySelector('.image-container');
 
 // Массив с позициями для точек перехода
 var infospotPositions = [
-  new THREE.Vector3(3135.12, -2732.44, -2766.28), // Для перехода из панорамы 1 в панораму 2
+  new THREE.Vector3(3866.78, -1549.12, 2762.06), // Для перехода из панорамы 1 в панораму 2
   new THREE.Vector3(-3136.06, 296.3, -4290.14), // Для перехода из панорамы 2 в панораму 1
   new THREE.Vector3(3460.93, 238.1, -3587.23), // Для перехода из панорамы 2 в панораму 3
 ];
@@ -126,9 +140,51 @@ panorama.add(infospot1);
 
 const infospot4 = createTextInfospotWithPointer(
   'ЖК Bailyq',
-  new THREE.Vector3(3651.8, -2519.52, -2289.04)
+  new THREE.Vector3(4060.17, -1456.76, 2512.66)
 );
 panorama.add(infospot4);
+
+const infospot5 = createTextInfospotWithPointer(
+  'Jibek Joly ТРЦ',
+  new THREE.Vector3(3780.6, -1237.47, 3014.88)
+);
+panorama.add(infospot5);
+
+const infospot6 = createTextInfospotWithPointer(
+  'Нұрлы жол вокзалы',
+  new THREE.Vector3(4171.12, -748.34, 2639.32)
+);
+panorama.add(infospot6);
+
+const infospot7 = createTextInfospotWithPointer(
+  'ЖК Bilim 1',
+  new THREE.Vector3(4210.51, -1965.44, 1836.86)
+);
+panorama.add(infospot7);
+
+const infospot8 = createTextInfospotWithPointer(
+  'ЖК Bilim 2',
+  new THREE.Vector3(4636.21, -1658.66, 816.9)
+);
+panorama.add(infospot8);
+
+const infospot9 = createTextInfospotWithPointer(
+  'ЖК Байтұрсын',
+  new THREE.Vector3(-2036.56, -822.46, -4488.29)
+);
+panorama.add(infospot9);
+
+const infospot10 = createTextInfospotWithPointer(
+  'Binom мектебі',
+  new THREE.Vector3(-1921.25, -4388.21, -1418.84)
+);
+panorama.add(infospot10);
+
+const infospot12 = createTextInfospotWithPointer(
+  '1000 жылдық аллеясы',
+  new THREE.Vector3(2157.1, -2182.94, -3939.01)
+);
+panorama.add(infospot12);
 
 const infospot11 = createTextInfospotWithPointer(
   'Dauletti qalashyk',
@@ -138,7 +194,7 @@ panoramaNight.add(infospot11);
 
 const infospot44 = createTextInfospotWithPointer(
   'ЖК Bailyq',
-  new THREE.Vector3(3651.8, -2519.52, -2289.04)
+  new THREE.Vector3(4060.17, -1456.76, 2512.66)
 );
 panoramaNight.add(infospot44);
 
@@ -153,3 +209,45 @@ const infospot3 = createTextInfospotWithPointer(
   new THREE.Vector3(-2776.93, -641.22, -4096.85)
 );
 panorama4.add(infospot3);
+
+const infospot55 = createTextInfospotWithPointer(
+  'Jibek Joly ТРЦ',
+  new THREE.Vector3(3780.6, -1237.47, 3014.88)
+);
+panoramaNight.add(infospot55);
+
+const infospot66 = createTextInfospotWithPointer(
+  'Нұрлы жол вокзалы',
+  new THREE.Vector3(4171.12, -748.34, 2639.32)
+);
+panoramaNight.add(infospot66);
+
+const infospot77 = createTextInfospotWithPointer(
+  'ЖК Bilim 1',
+  new THREE.Vector3(4210.51, -1965.44, 1836.86)
+);
+panoramaNight.add(infospot77);
+
+const infospot88 = createTextInfospotWithPointer(
+  'ЖК Bilim 2',
+  new THREE.Vector3(4636.21, -1658.66, 816.9)
+);
+panoramaNight.add(infospot88);
+
+const infospot99 = createTextInfospotWithPointer(
+  'ЖК Байтұрсын',
+  new THREE.Vector3(-2036.56, -822.46, -4488.29)
+);
+panoramaNight.add(infospot99);
+
+const infospot1010 = createTextInfospotWithPointer(
+  'Binom мектебі',
+  new THREE.Vector3(-1921.25, -4388.21, -1418.84)
+);
+panoramaNight.add(infospot1010);
+
+const infospot1212 = createTextInfospotWithPointer(
+  '1000 жылдық аллеясы',
+  new THREE.Vector3(2157.1, -2182.94, -3939.01)
+);
+panoramaNight.add(infospot1212);
