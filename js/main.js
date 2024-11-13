@@ -197,7 +197,7 @@ panorama.add(infospot8);
 
 const infospot9 = createTextInfospotWithPointer(
   "ЖК Байтұрсын",
-  new THREE.Vector3(-2036.56, -822.46, -4488.29)
+  new THREE.Vector3(-2067.94, -562.69, -4510.39)
 );
 panorama.add(infospot9);
 
@@ -239,7 +239,7 @@ panoramaNight.add(infospot88);
 
 const infospot99 = createTextInfospotWithPointer(
   "ЖК Байтұрсын",
-  new THREE.Vector3(-2036.56, -822.46, -4488.29)
+  new THREE.Vector3(-2067.94, -562.69, -4510.39)
 );
 panoramaNight.add(infospot99);
 
@@ -305,7 +305,7 @@ otherPanorama.add(infospot8888);
 
 const infospot9999 = createTextInfospotWithPointer(
   "ЖК Байтұрсын",
-  new THREE.Vector3(4001.77, -439.86, -2959.02)
+  new THREE.Vector3(3802.65, -373.06, -3215.05)
 );
 otherPanorama.add(infospot9999);
 
