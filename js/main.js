@@ -30,12 +30,14 @@ const viewer = new PANOLENS.Viewer({
 
 // Связывание панорам с позициями переходов
 otherPanorama.link(panorama, infospotPositions[0]);
+otherPanorama.link(panorama2, new THREE.Vector3(4229.07, -2552.3, 728.86));
 panorama.link(panorama2, infospotPositions[0]);
 panoramaNight.link(panorama2, infospotPositions[0]);
 panorama2.link(panorama, infospotPositions[1]);
 panorama2.link(panoramaNight, infospotPositions[1]);
 panorama2.link(panorama3, infospotPositions[2]);
 panorama3.link(panorama4, new THREE.Vector3(1870.33, -474.26, -4603.57));
+panorama4.link(panorama3, new THREE.Vector3(-1874.52, -295.66, 4616.4));
 panorama4.link(panorama5, new THREE.Vector3(-81.3, -629.69, -4952.23));
 panorama5.link(panorama6, new THREE.Vector3(-2.98, -605.01, -4959.25));
 panorama6.link(panorama7, new THREE.Vector3(-4600.68, -489.0, -1873.0));
@@ -146,10 +148,22 @@ function createTextInfospotWithPointer(text, position) {
 
 // Добавление текстовых точек перехода с указателем
 const infospot1 = createTextInfospotWithPointer(
-  "Dauletti qalashyk",
-  new THREE.Vector3(4528.79, -2108.56, 12.32)
+  "Birlik 1",
+  new THREE.Vector3(4196.38, -2698.49, 178.49)
 );
 panorama.add(infospot1);
+
+const infospot101 = createTextInfospotWithPointer(
+  "Birlik 2",
+  new THREE.Vector3(4540.54, -1994.9, -581.21)
+);
+panorama.add(infospot101);
+
+const infospot101101 = createTextInfospotWithPointer(
+  "Baqyt",
+  new THREE.Vector3(3712.28, -2393.64, -2325.16)
+);
+panorama.add(infospot101101);
 
 const infospot4 = createTextInfospotWithPointer(
   "ЖК Bailyq",
@@ -242,14 +256,26 @@ const infospot1212 = createTextInfospotWithPointer(
 panoramaNight.add(infospot1212);
 
 const infospot11 = createTextInfospotWithPointer(
-  "Dauletti qalashyk",
-  new THREE.Vector3(4528.79, -2108.56, 12.32)
+  "Birlik 1",
+  new THREE.Vector3(4196.38, -2698.49, 178.49)
 );
 panoramaNight.add(infospot11);
 
+const infospot1100 = createTextInfospotWithPointer(
+  "Birlik 2",
+  new THREE.Vector3(4540.54, -1994.9, -581.21)
+);
+panoramaNight.add(infospot1100);
+
+const infospot201101 = createTextInfospotWithPointer(
+  "Baqyt",
+  new THREE.Vector3(3712.28, -2393.64, -2325.16)
+);
+panoramaNight.add(infospot201101);
+
 const infospot44 = createTextInfospotWithPointer(
   "ЖК Bailyq",
-  new THREE.Vector3(4390.65, -2270.46, 716.27)
+  new THREE.Vector3(4060.17, -1456.76, 2512.66)
 );
 panoramaNight.add(infospot44);
 
@@ -296,10 +322,22 @@ const infospot121212 = createTextInfospotWithPointer(
 otherPanorama.add(infospot121212);
 
 const infospot111 = createTextInfospotWithPointer(
-  "Dauletti qalashyk",
-  new THREE.Vector3(4728.06, -1277.53, -986.16)
+  "Birlik 1",
+  new THREE.Vector3(4462.62, -1223.79, -1878.07)
 );
 otherPanorama.add(infospot111);
+
+const infospot211 = createTextInfospotWithPointer(
+  "Birlik 2",
+  new THREE.Vector3(4808.24, -1020.68, -864.57)
+);
+otherPanorama.add(infospot211);
+
+const infospot311 = createTextInfospotWithPointer(
+  "Baqyt",
+  new THREE.Vector3(4587.8, -940.41, -1722.15)
+);
+otherPanorama.add(infospot311);
 
 const infospot444 = createTextInfospotWithPointer(
   "ЖК Bailyq",
